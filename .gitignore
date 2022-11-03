@@ -1,0 +1,41 @@
+.DS_Store
+.DS_Store/*
+
+.idea/
+.ipynb_checkpoints/
+
+# ignore python stuff
+__pycache__/
+.venv/
+
+# ignore storage
+.opt/*
+.docker/*
+
+# ignore all .env
+**/.env
+**/.env.*
+
+*.png
+*.xlsx
+*.csv
+*.pkl
+*.err
+*.out
+*.log
+
+model_api/data/*
+model_api/app/data/*
+
+data/*
+
+# ignore build files
+dist/*
+server.egg-info/*
+
+# keep gitkeep
+!**/.gitkeep
+*.stats
+
+# ignore generated
+node_modules
