@@ -16,5 +16,5 @@ Also get going with a open source project like thing. You gotta get started some
 Q: Why would I want these sample projects that I won't use in my app!?<br/>
 A: Well, you should be able to delete them if you don't want them. It's meant to be a template, update it however you want!
 
-Q: There are things I want to see implemented, what do I do?
+Q: There are things I want to see implemented, what do I do?<br/>
 A: Prompt a discussion or an issue.
