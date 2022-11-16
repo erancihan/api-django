@@ -6,7 +6,8 @@
   Support Firebase and regular login and make them work together
 - [ ] ML back-end
   - [ ] MNIST handwritten digit recognition. Upload an image, report which digit it is.
-- [ ] Docker Compose, CI/CD
+- [ ] Docker Compose
+- [ ] CI/CD
 
 ## Why?
 It felt like I might endup using a Python based framework more than once. And restructuring, adding every same feature over and over again sounded a tedious thing to do. And thus, I have opted to create a template repository, and add stuff into it instead.
