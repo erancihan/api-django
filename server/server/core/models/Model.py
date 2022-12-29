@@ -1,18 +1,26 @@
 from django.db import models
 from django.utils import timezone
 
-class SoftDeleteManager(models.Manager):
-    """
-    so that when we get objects, non soft deleted ones always retrieved
-    """
-    def get_queryset(self):
-        return super().get_queryset().filter(deleted_at__isnull=True)
+from server import settings
+from server.core.managers import SoftDeleteManager
 
-class SoftDeleteModel(models.Model):
+
+class Model(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     deleted_at = models.DateTimeField(null=True, blank=True, default=None)
 
     objects = SoftDeleteManager()
     all_objects = models.Manager()
+
+    def delete(self):
+        if getattr(settings, "DEFAULT_IS_SOFT_DELETE", True):
+            self.soft_delete()
+        else:
+            self.hard_delete()
+
+    def hard_delete(self):
+        super().delete()
 
     def soft_delete(self):
         self.deleted_at = timezone.now()
