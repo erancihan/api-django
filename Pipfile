@@ -45,6 +45,7 @@ pipenv = "*"
 pep8 = "*"
 flake8 = "*"
 pre-commit = "*"
+grpcio-tools = "*"
 
 [requires]
 python_version = "3.10"
