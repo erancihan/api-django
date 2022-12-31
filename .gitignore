@@ -12,6 +12,9 @@ __pycache__/
 .opt/*
 .docker/*
 
+# ignore DB
+**/*.sqlite3
+
 # ignore all .env
 **/.env
 **/.env.*
