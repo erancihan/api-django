@@ -35,6 +35,6 @@ else
     if [[ "$IS_DEV" == 1 ]]; then
         python manage.py runserver 0.0.0.0:8080
     else
-        gunicorn -R --workers=1 --timeout=120 --bind=0.0.0.0:80 server.wsgi
+        gunicorn -R --workers=5 --timeout=120 --bind=0.0.0.0:80 server.wsgi
     fi
 fi

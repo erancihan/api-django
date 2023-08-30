@@ -12,11 +12,13 @@ repos:
     hooks:
     - id: black
       language_version: python3.10
+      exclude: _pb2[\.py|\.pyi|_grpc\.py]
 
   - repo: https://github.com/pycqa/flake8
     rev: 6.0.0
     hooks:
     - id: flake8
+      exclude: _pb2[\.py|\.pyi|_grpc\.py]
 
   - repo: local
     hooks:
